@@ -44,7 +44,7 @@ export const SocketProvider: React.FC<{ children: React.ReactNode }> = ({ childr
     const username = Cookies.get("username");
     if (!username) return; // only connect if session exists
 
-    const newSocket = io("http://localhost:8000");
+    const newSocket = io("https://voticast-websocket.onrender.com");
 
     setSocket(newSocket);
 
